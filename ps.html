@@ -1,46 +1,73 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo comando ps</title>
+    <title>Pagina PS</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Ejemplo de uso del comando ps</h1>
 
-    <p>Mostrar procesos actuales:</p>
-    <pre>ps</pre>
+    <h1>PS</h1>
 
-    <p>Mostrar todos los procesos:</p>
-    <pre>ps aux</pre>
+    <!-- DESCRIPCIÓN -->
+    <h2>Descripción</h2>
+    <div class="flex">
+        <p>
+            El comando <strong>ps</strong> se utiliza en sistemas Linux y Unix para mostrar información sobre los procesos que se están ejecutando en el sistema. 
+            Permite ver el identificador del proceso (PID), el usuario, el uso de CPU y memoria, entre otros datos.
+        </p>
+    </div>
 
-    <p>Buscar un proceso específico:</p>
-    <pre>ps aux | grep nombre_proceso</pre>
+    <!-- OPCIONES -->
+    <h2>Opciones</h2>
+    <div class="flex">
+         <ul>
+            <li><strong>-e</strong> → Muestra todos los procesos del sistema.</li>
+            <li><strong>-f</strong> → Muestra información detallada (formato completo).</li>
+            <li><strong>-u</strong> → Muestra los procesos de un usuario específico.</li>
+        </ul>
+    </div>
 
-    <p>Mostrar procesos con formato detallado:</p>
-    <pre>ps -ef</pre>
+    <!-- EJEMPLOS -->
+    <h2>Ejemplos</h2>
+        <div class="flex">
+            <pre>
+# Mostrar todos los procesos
+ps -e
 
-    <h2>EJEMPLOS DE ERRORES COMUNES</h2>
+# Mostrar procesos con formato completo
+ps -ef
+            </pre>
 
-    <p>Error: olvidar opciones para ver todos los procesos</p>
-    <pre>ps</pre>
-    <p>Correcto:</p>
-    <pre>ps aux</pre>
+        </div>
+    <h2>Aportaciones</h2>
 
-    <p>Error: buscar proceso sin usar grep</p>
-    <pre>ps aux nombre</pre>
-    <p>Correcto:</p>
-    <pre>ps aux | grep nombre</pre>
-
-    <p>Error: usar mal las opciones</p>
-    <pre>ps -a -u -x (separado innecesariamente)</pre>
-    <p>Correcto:</p>
-    <pre>ps aux</pre>
-
-    <hr>
-
-    <footer>
-        <h3>HECHO POR ARON</h3>
-    </footer>
+    <h3>Aron Estalayo</h3>
 
 </body>
 </html>

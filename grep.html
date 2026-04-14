@@ -1,46 +1,93 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo comando grep</title>
+    <title>Pagina GREP</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Ejemplo de uso del comando grep</h1>
 
-    <p>Buscar una palabra en un archivo:</p>
-    <pre>grep "texto" archivo.txt</pre>
+    <h1>GREP</h1>
 
-    <p>Buscar sin distinguir mayúsculas/minúsculas:</p>
-    <pre>grep -i "texto" archivo.txt</pre>
+    <!-- DESCRIPCIÓN -->
+    <h2>Descripción</h2>
+    <div class="flex">
+        <p>
+            El comando <strong>grep</strong> se utiliza para buscar texto dentro de archivos. 
+            Permite encontrar palabras o patrones específicos y mostrar las líneas donde aparecen.
+        </p>
+    </div>
 
-    <p>Buscar en varios archivos:</p>
-    <pre>grep "texto" *.txt</pre>
+    <!-- OPCIONES -->
+    <h2>Opciones</h2>
+    <div class="flex">
+         <ul>
+            <li><strong>-i</strong> → Ignora mayúsculas y minúsculas.</li>
+            <li><strong>-n</strong> → Muestra el número de línea.</li>
+            <li><strong>-r</strong> → Busca de forma recursiva en directorios.</li>
+        </ul>
+    </div>
 
-    <p>Mostrar número de línea:</p>
-    <pre>grep -n "texto" archivo.txt</pre>
+    <!-- EJEMPLOS -->
+    <h2>Ejemplos</h2>
+        <div class="flex">
+            <pre>
+# Buscar una palabra en un archivo
+grep "texto" archivo.txt
 
-    <h2>EJEMPLOS DE ERRORES COMUNES</h2>
+# Ignorar mayúsculas/minúsculas
+grep -i "texto" archivo.txt
 
-    <p>Error: no usar comillas en textos con espacios</p>
-    <pre>grep texto largo archivo.txt</pre>
-    <p>Correcto:</p>
-    <pre>grep "texto largo" archivo.txt</pre>
+# Mostrar número de línea
+grep -n "texto" archivo.txt
+            </pre>
+        </div>
 
-    <p>Error: olvidar -i para ignorar mayúsculas</p>
-    <pre>grep "hola" archivo.txt</pre>
-    <p>Correcto:</p>
-    <pre>grep -i "hola" archivo.txt</pre>
+    <!-- ERRORES -->
+    <h2>Errores comunes</h2>
+        <div class="flex">
+            <pre>
+# Error: no usar comillas
+grep texto largo archivo.txt
 
-    <p>Error: usar mal comodines</p>
-    <pre>grep "texto" .txt</pre>
-    <p>Correcto:</p>
-    <pre>grep "texto" *.txt</pre>
+# Correcto
+grep "texto largo" archivo.txt
 
-    <hr>
+# Error: olvidar -i
+grep "hola" archivo.txt
 
-    <footer>
-        <h3>HECHO POR ARON</h3>
-    </footer>
+# Correcto
+grep -i "hola" archivo.txt
+            </pre>
+        </div>
+
+    <h2>Aportaciones</h2>
+    <h3>Aron Estalayo</h3>
 
 </body>
 </html>
